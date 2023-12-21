@@ -8,10 +8,10 @@
 void factorize(char *buffer)
 {
 
-	unsigned long long num, i;
+	long unsigned int num, i;
 
 
-	num = strtoul(buffer, NULL, 10);
+	num = atoi(buffer);
 
 
 
@@ -19,7 +19,7 @@ void factorize(char *buffer)
 	{
 		if (num % i == 0)
 		{
-			printf("%lld=%lld*%lld\n",num,num/i,i);
+			printf("%ld=%ld*%ld\n",num,num/i,i);
 			break;
 		}
 	}
