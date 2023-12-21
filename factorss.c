@@ -11,7 +11,7 @@ void factorize(char *buffer)
 	long unsigned int num, i;
 
 
-	num = atoi(buffer);
+	num = atol(buffer);
 
 
 
@@ -22,7 +22,14 @@ void factorize(char *buffer)
 			printf("%ld=%ld*%ld\n",num,num/i,i);
 			break;
 		}
+		else
+		{
+			printf("%ld=%d*%ld\n", num,1,num);
+			break;
+		}
 	}
 
 }
 
+//if the number is prime
+// 
