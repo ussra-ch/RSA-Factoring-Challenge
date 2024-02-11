@@ -12,24 +12,20 @@ void factorize(char *buffer)
 
 
 	num = atol(buffer);
+	int found = 0;
 
 
-
-	for (i = 2; i < num; i++)
+	for (i = num/2; i <= 1; i--)
 	{
 		if (num % i == 0)
 		{
 			printf("%ld=%ld*%ld\n",num,num/i,i);
+			found = 1;
 			break;
 		}
-		else
-		{
-			printf("%ld=%d*%ld\n", num,1,num);
-			break;
-		}
+		
 	}
+	if (found == 0)
+		printf("%ld=%d*%ld\n", num,1,num);
 
 }
-
-//if the number is prime
-// 
